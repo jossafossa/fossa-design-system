@@ -1,0 +1,31 @@
+:root {
+  // transitions
+  --transition: 0.25s ease;
+
+  // generic
+  --primary: 228, 66, 98;
+  --secondary: 99, 79, 169;
+  --black: 27, 27, 30;
+
+  // specific colors
+  --body-color: rgb(var(--black));
+
+  // generic sizes
+
+  // specific sizes
+  --height-xsmall: 24px;
+  --height-small: 32px;
+  --height-medium: 40px;
+  --height-large: 48px;
+
+  // font sizes
+  --font-size-small: 0.85em;
+  --font-size-medium: 1em;
+  --font-size-large: 1.25em;
+
+  // spacing
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 12px;
+  --spacing-large: 16px;
+}

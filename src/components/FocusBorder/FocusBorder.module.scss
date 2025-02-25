@@ -1,0 +1,13 @@
+.focusBorder {
+  --_focus-color: var(--secondary);
+  --_focus-color-full: rgb(var(--_focus-color));
+  --_focus-color-transparent: rgba(var(--_focus-color), 0.3);
+  box-shadow: 0 0 0 0px var(--_focus-color);
+  outline: none;
+}
+
+.focusBorder:has(:focus-visible),
+.focusBorder:focus-visible {
+  box-shadow: 0 0 0 1px var(--_focus-color-full), 0 0 0 4px var(--_focus-color-transparent);
+  --focus-color: rgb(var(--_focus-color));
+}

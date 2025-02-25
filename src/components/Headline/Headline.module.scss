@@ -1,0 +1,15 @@
+.headline {
+  --border-color: red;
+  position: relative;
+  padding-bottom: 1rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 0.5rem;
+    background-color: var(--border-color);
+    transform: translateX(-100%);
+    bottom: 0;
+  }
+}

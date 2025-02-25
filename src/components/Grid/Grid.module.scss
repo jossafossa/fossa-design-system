@@ -1,0 +1,33 @@
+$breakpoints: (
+  small: 0px,
+  medium: 576px,
+  large: 992px,
+);
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 12), 1fr);
+  gap: 1rem;
+
+  @each $name, $value in $breakpoints {
+    @container grid (min-width: #{$value}) {
+      --columns: var(--#{$name}Columns);
+    }
+  }
+}
+
+.cell {
+  grid-column: span var(--span, 1);
+
+  @each $name, $value in $breakpoints {
+    @container grid (min-width: #{$value}) {
+      --span: var(--#{$name}Span);
+    }
+  }
+}
+:global {
+  body {
+    container-name: grid;
+    container-type: inline-size;
+  }
+}

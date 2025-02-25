@@ -1,0 +1,19 @@
+.tag {
+  height: var(--height-xsmall);
+  font-size: var(--font-size-small);
+  padding-inline: var(--spacing-medium);
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 100px;
+}
+
+.primary {
+  --color: rgb(var(--primary));
+}
+
+.secondary {
+  --color: rgb(var(--secondary));
+}

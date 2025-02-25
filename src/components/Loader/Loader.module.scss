@@ -1,0 +1,29 @@
+.loader {
+  --size: 1.2em;
+  display: block;
+  color: currentColor;
+  width: var(--size);
+  height: var(--size);
+  animation: spin 1s linear infinite;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.small {
+  font-size: var(--font-size-small);
+}
+
+.medium {
+  font-size: var(--font-size-medium);
+}
+
+.large {
+  font-size: var(--font-size-large);
+}

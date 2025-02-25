@@ -1,0 +1,81 @@
+.button {
+  --color: rgb(var(--primary));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--size);
+  padding-inline: 1em;
+  border-radius: 100px;
+  border: 1px solid var(--focus-color, var(--border-color));
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(var(--black));
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+  }
+
+  &:where(:hover, :focus-visible):after {
+    opacity: 0.075;
+  }
+
+  &:active:after {
+    opacity: 0.125;
+  }
+}
+
+.text {
+  opacity: 1;
+  transition: var(--transition);
+  z-index: 2;
+  position: relative;
+}
+
+.small {
+  font-size: 0.85em;
+  --size: var(--height-small);
+}
+
+.medium {
+  font-size: 1em;
+  --size: var(--height-medium);
+}
+
+.large {
+  font-size: 1.25em;
+  --size: var(--height-large);
+}
+
+.secondary {
+  --color: rgba(var(--secondary), 0.3);
+  color: rgb(var(--body-color));
+  background-color: transparent;
+  --border-color: var(--color);
+}
+
+.primary {
+  color: white;
+  background-color: var(--color);
+  --border-color: var(--color);
+}
+
+.loader {
+  position: absolute;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.isLoading {
+  .text {
+    opacity: 0;
+  }
+  .loader {
+    opacity: 1;
+  }
+}
