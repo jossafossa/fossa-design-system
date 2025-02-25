@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+  "no-plusplus": "off",
+  "linebreak-style": "off",
+  "object-curly-spacing": ["warn", "always"],
+  "array-bracket-spacing": ["warn", "always"],
+  "computed-property-spacing": ["warn", "always"],
+  "block-spacing": ["warn", "always"],
+  "space-in-parens": ["warn", "always"],
+
+  "quotes": ["warn", "double"],
+
+  "no-else-return": "warn"
+}

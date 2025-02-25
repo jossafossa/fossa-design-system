@@ -1,0 +1,37 @@
+:where(.wrapper) {
+  --border-color: rgba(0, 0, 0, 0.2);
+  --gap: 8px;
+  display: flex;
+  height: var(--size);
+  align-items: center;
+  border: 1px solid var(--focus-color, var(--border-color));
+  box-shadow: 0 0 0 0px var(--focus-color);
+  transition: 0.1s ease;
+  border-radius: 4px;
+  background-color: white;
+  overflow: hidden;
+  padding-inline: var(--gap);
+  gap: var(--gap);
+}
+
+.input {
+  height: 100%;
+  border: none;
+  outline: none;
+  font: inherit;
+  background: none;
+  min-width: auto;
+  flex: 1;
+}
+
+.small {
+  --size: var(--height-small);
+}
+
+.medium {
+  --size: var(--height-medium);
+}
+
+.large {
+  --size: var(--height-large);
+}

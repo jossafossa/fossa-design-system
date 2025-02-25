@@ -1,0 +1,12 @@
+import { PropsWithChildren } from "react";
+import styles from "./{{pascalCase name}}.module.scss";
+
+export type {{pascalCase name}}Props = PropsWithChildren;
+
+export const {{pascalCase name}} = ( { children }: {{pascalCase name}}Props) => {
+  return (
+    <div className={ styles.{{camelCase name}} }>
+      { children }
+    </div>
+  );
+};
