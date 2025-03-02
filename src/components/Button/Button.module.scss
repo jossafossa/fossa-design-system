@@ -1,5 +1,5 @@
 .button {
-  --color: rgb(var(--primary));
+  --color: rgb(var(--color-primary-rgb));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgb(var(--black));
+    background-color: rgb(var(--color-black-rgb));
     opacity: 0;
     transition: var(--transition);
     z-index: 1;
@@ -53,7 +53,7 @@
 }
 
 .secondary {
-  --color: rgba(var(--secondary), 0.3);
+  --color: rgba(var(--color-secondary-rgb), 0.3);
   color: rgb(var(--body-color));
   background-color: transparent;
   --border-color: var(--color);

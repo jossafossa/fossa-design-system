@@ -1,14 +1,28 @@
+@mixin color($name, $value) {
+  --color-#{$name}: #{$value};
+  --color-#{$name}-r: #{red($value)};
+  --color-#{$name}-g: #{green($value)};
+  --color-#{$name}-b: #{blue($value)};
+  --color-#{$name}-a: #{alpha($value)};
+  --color-#{$name}-h: #{hue($value)};
+  --color-#{$name}-s: #{saturation($value)};
+  --color-#{$name}-l: #{lightness($value)};
+  --color-#{$name}-hsl: var(--color-#{$name}-h), var(--color-#{$name}-s), var(--color-#{$name}-l);
+  --color-#{$name}-rgb: var(--color-#{$name}-r), var(--color-#{$name}-g), var(--color-#{$name}-b);
+}
+
 :root {
   // transitions
   --transition: 0.25s ease;
 
   // generic
-  --primary: 228, 66, 98;
-  --secondary: 99, 79, 169;
-  --black: 27, 27, 30;
+  @include color('primary', #e44262);
+  @include color('secondary', #634fa9);
+  @include color('black', #1b1b1d);
+  @include color('danger', #ff3e3e);
 
   // specific colors
-  --body-color: rgb(var(--black));
+  --body-color: rgb(var(--color-black-rgb));
 
   // generic sizes
 

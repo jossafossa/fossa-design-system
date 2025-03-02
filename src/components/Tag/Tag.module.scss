@@ -11,9 +11,9 @@
 }
 
 .primary {
-  --color: rgb(var(--primary));
+  --color: var(--color-primary);
 }
 
 .secondary {
-  --color: rgb(var(--secondary));
+  --color: var(--color-secondary);
 }
